@@ -1725,3 +1725,6 @@ h4 {
     width: 25rem;
   }
 }
+.popup-active {
+  display: block;
+}
