@@ -10,11 +10,13 @@ const modal = () => {
 			item.addEventListener("click", (e) => {
 				e.preventDefault();
 				modalToggle(modal);
+				modal.classList.add("animated", "fadeIn");
 				document.body.overflow = "hidden";
 			});
 		});
 		close.addEventListener("click", (e) => {
 			modalToggle(modal);
+
 			document.body.overflow = "visible";
 		});
 		modal.addEventListener("click", (e) => {
@@ -24,16 +26,15 @@ const modal = () => {
 			}
 		});
 	}
-	function modalScrollShow(modalSelector) {
-		const modalS = document.querySelector(modalSelector);
+	function modalScrollShow() {
+		// const modalS = document.querySelector(modalSelector);
 		if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
-			modalS.style.display = "block";
+			document.querySelector(".fixed-gift").style.display = "none";
+			document.querySelector(".popup-gift").classList.toggle("popup-active");
 			window.removeEventListener("scroll", modalScrollShow);
 		}
 	}
-	window.addEventListener("scroll", () => {
-		modalScrollShow(".popup-gift");
-	});
+	window.addEventListener("scroll", modalScrollShow);
 
 	bindModal(".popup-design", " .button-design", ".popup-design .popup-close");
 	bindModal(".popup-consultation", ".button-consultation", ".popup-consultation .popup-close");
