@@ -7,6 +7,8 @@ import checkMailInput from "./modules/checkMailInput";
 import showMoreStyles from "./modules/showMoreStyles";
 import hamburger from "./modules/hamburger";
 import hoverEffect from "./modules/hoverEffect";
+import calculcator from "./modules/calculator";
+import filter from "./modules/filter";
 window.addEventListener("DOMContentLoaded", () => {
 	"use strict";
 	modal();
@@ -20,4 +22,6 @@ window.addEventListener("DOMContentLoaded", () => {
 	showMoreStyles(".button-styles", "#styles .row");
 	hamburger(".burger", "burger-active", ".burger-menu");
 	hoverEffect();
+	calculcator("#size", "#material", "#options", ".promocode", ".calc-price");
+	filter();
 });

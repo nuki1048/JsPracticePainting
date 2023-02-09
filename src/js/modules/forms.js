@@ -65,6 +65,12 @@ const forms = () => {
 			console.log(api);
 
 			const formData = new FormData(item);
+			if (item.classList.contains("calc_form")) {
+				const input = document.querySelector(".calc-price");
+				formData.append("price", input.textContent);
+			} else {
+				formData.append("type", "Пользователь не делал заказ на картину");
+			}
 			postData(api, formData)
 				.then((data) => {
 					console.log(data);
