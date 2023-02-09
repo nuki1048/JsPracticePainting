@@ -75,9 +75,11 @@ h4 {
 	margin: 0 auto;
 	font-family: "Circe Bold", sans-serif;
 }
+
 .status {
 	text-align: center;
 }
+
 .button-transparent {
 	background-color: transparent;
 	font-size: 1.5rem;

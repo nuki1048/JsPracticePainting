@@ -5,6 +5,8 @@ import mask from "./modules/mask";
 import checkTextInputs from "./modules/checkTextInputs";
 import checkMailInput from "./modules/checkMailInput";
 import showMoreStyles from "./modules/showMoreStyles";
+import hamburger from "./modules/hamburger";
+import hoverEffect from "./modules/hoverEffect";
 window.addEventListener("DOMContentLoaded", () => {
 	"use strict";
 	modal();
@@ -15,5 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	checkTextInputs('[name="name"]');
 	checkTextInputs('[name="message"]');
 	checkMailInput("[name=email]");
-	showMoreStyles(".hidden-lg", ".button-styles");
+	showMoreStyles(".button-styles", "#styles .row");
+	hamburger(".burger", "burger-active", ".burger-menu");
+	hoverEffect();
 });
