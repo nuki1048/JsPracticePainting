@@ -3,7 +3,10 @@ const hamburger = (hamburgerElement, activeClass, menuSelector) => {
 		menu = document.querySelector(menuSelector),
 		menuItem = document.querySelectorAll(".burger-menu li");
 	hamburger.addEventListener("click", (e) => {
-		if (menu.style.display != "block" || !menu.style.display) {
+		if (
+			(menu.style.display != "block" && screen.availWidth < 992) ||
+			(!menu.style.display && screen.availWidth < 992)
+		) {
 			hamburger.classList.toggle(activeClass);
 			menu.classList.add("animated", "fadeInDown");
 			menu.style.display = "block";
