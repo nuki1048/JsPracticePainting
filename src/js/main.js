@@ -9,6 +9,9 @@ import hamburger from './modules/hamburger';
 import hoverEffect from './modules/hoverEffect';
 import calculcator from './modules/calculator';
 import filter from './modules/filter';
+import accordion from './modules/accordion';
+import scroll from './modules/scroll';
+import drop from './modules/drop';
 
 window.addEventListener('DOMContentLoaded', () => {
   modal();
@@ -24,4 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   hamburger('.burger', 'burger-active', '.burger-menu');
   calculcator('#size', '#material', '#options', '.promocode', '.calc-price');
   sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
+  accordion('.accordion-heading');
+  scroll('.pageup');
+  drop();
 });
